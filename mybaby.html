@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+
+        body {
+        background-image: url('img-sq/0.jpg');
+        background-size: cover;
+        text-align: center;
+        }
+
+        .canvas{
+        justify-content: center;
+        background-color:#e8e8e8;
+        height: 1000px;
+        width: 1000px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+        }
+
+        .item{
+        position: relative;
+        font-size: 70px;
+        color: black;
+        }
+
+        .ruby-menu {
+        height: 100px;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        background-color:rgba(0, 0, 0, 0.3);
+        }
+
+        .text p {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 10px 0 5px 0;
+        }
+
+        .photo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 10px;
+
+}
+
+    </style>
+    <title>Ruby's Profolio</title>
+</head>
+<body onclick="changeImage()">
+    
+    <div class="background"></div>
+
+    <nav class= "ui two item menu ruby-menu">
+        <a class= "item" href ="index.html"> HELLO </a>
+        <a class= "item" href ="mybaby.html"> MY BABY </a>
+   </nav>
+
+   <div class="canvas">
+    <div class="myPhoto">
+        <img src ="img-sq/02.jpg" id ="ph "class="photo">
+        <p style="color: white";> Hi I'm Dina</p>
+    </div>
+
+
+    <script>
+
+const pathNames = [
+        'img-sq/02.jpg',
+        'img-sq/03.jpg',
+        'img-sq/04.jpg',
+        'img-sq/05.jpg',
+
+    ];
+
+const myImageElement = document.body.querySelector('img');
+myImageElement.src = `${pathNames[1]}`;
+
+const changeImage = () => {
+
+    myImageElement.src = `${pathNames[Math.floor(Math.random()*pathNames.length)]}`;
+
+}
+
+    </script>
+
+</body>
+</html>
